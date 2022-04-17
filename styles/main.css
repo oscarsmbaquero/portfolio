@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* colores */
+/* tipografías */
+nav {
+  background-color: #181818;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+
+nav > .logo {
+  width: 30px;
+  margin-left: 1.5rem;
+}
+
+nav .navbar-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .navbar-links-container a {
+  color: red;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+nav .navbar-links-container a:hover {
+  background-color: red;
+  color: white;
+}
+
+.section-container {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.section1 {
+  background-color: #252628;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 900px) {
+  .section1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section1 p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h1 .myName {
+  color: red;
+}
+
+.profile-img {
+  width: 300px;
+  border-radius: 50%;
+  border: solid 15px white;
+}
+
+.profile-img:hover {
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+@media only screen and (max-width: 900px) {
+  .text-container {
+    text-align: center;
+  }
+}
+
+.section2 {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table {
+  width: 80%;
+}
+
+.table th {
+  width: 25%;
+  text-align: left;
+  background-color: #252628;
+  color: white;
+  text-align: center;
+}
+
+.table td {
+  width: 25%;
+  text-align: left;
+}
+
+.flip-container {
+  background-color: transparent;
+  margin-top: 10rem;
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  margin: 10px 10px 10px 10px;
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  height: 98%;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1), -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.card h3, .card p {
+  display: block;
+}
+
+/* GIRA HORIZONTAL */
+.flip-container:hover .card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+}
+
+.front {
+  background-color: #252628;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.back {
+  background-color: #252628;
+  color: #faebd7;
+  /*transform: rotateX(180deg);*/
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  text-align: center;
+}
+
+.back p {
+  font-size: 0.50em;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 100px 20px;
+  background-color: #252628;
+}
+
+.gallery__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.gallery__item--item1 {
+  background-image: url(../images/proyectos.jpg);
+}
+
+.gallery__item--item2 {
+  background-image: url(../images/portafolio.jpg);
+}
+
+.gallery__item--item3 {
+  background-image: url(../images/voluntariado.jpg);
+}
+
+.gallery__title {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgba(170, 164, 164, 0.5);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/*# sourceMappingURL=main.css.map */

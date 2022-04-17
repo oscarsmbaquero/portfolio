@@ -1,0 +1,85 @@
+.section2 {
+    background-color: white;
+  
+    @include flexCenter(row, center, center);
+  }
+
+
+.table{
+    width: 80%;
+    th {
+        width: 25%;
+        text-align: left;
+        background-color: $secondaryColor;
+        color:$light;
+        text-align: center;
+     }
+     td {
+        width: 25%;
+        text-align: left;
+     }
+}
+
+
+///rotar 
+.flip-container {
+    background-color: transparent;
+    margin-top: 10rem;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin:0 auto;
+  }
+  
+  .card {
+    margin: 10px 10px 10px 10px;
+    // border-width: 2px;
+    //border-style: solid;
+    // border-radius: 25%;
+    
+    // border-color: red;
+    position: relative;
+    display:inline-block;
+    width: 90%;
+    height: 98%;
+    text-align: center;
+    transform-style: preserve-3d;
+    // margin: 30px 30px 30px 30px;
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  }
+  
+  .card h3, .card p {
+    display:block;
+  }
+  /* GIRA HORIZONTAL */
+  .flip-container:hover .card {
+    transform: rotateY(180deg);
+  }
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .front {
+    background-color: $secondaryColor;
+    color: #fff;
+    display: flex;
+  }
+  
+  .back {
+    background-color: $secondaryColor;
+    color: #faebd7;
+    /*transform: rotateX(180deg);*/
+    transform: rotateY(180deg);
+    text-align:center;
+  }
+  
+  .back p {
+    font-size:0.50em;
+  }
+  
