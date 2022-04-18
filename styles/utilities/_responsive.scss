@@ -4,7 +4,9 @@ $desktop: 900px;
 
 @mixin mobile {
   @media only screen and (max-width: $mobile) {
-    @content;
+    .section2{
+     flex-direction: row;
+    };
   }
 }
 

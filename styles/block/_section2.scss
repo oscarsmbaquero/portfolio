@@ -1,32 +1,14 @@
 .section2 {
     background-color: white;
   
-    @include flexCenter(row, center, center);
+    @include flexCenter(column, center, center);
   }
-
-
-.table{
-    width: 80%;
-    th {
-        width: 25%;
-        text-align: left;
-        background-color: $secondaryColor;
-        color:$light;
-        text-align: center;
-     }
-     td {
-        width: 25%;
-        text-align: left;
-     }
-}
-
-
 ///rotar 
 .flip-container {
-    background-color: transparent;
+    // background-color: red;
     margin-top: 10rem;
-    width: 300px;
-    height: 300px;
+    width: 800px;
+    height: 350px;
     perspective: 1000px;
     margin:0 auto;
   }
@@ -35,9 +17,11 @@
     // background-image:url("/images/portafolio.jpg");
     margin: 10px 10px 10px 10px;
     position: relative;
+
+    // align-items: center;
     display:inline-block;
-    width: 90%;
-    height: 98%;
+    width: 40rem;
+    height: 20rem;
     text-align: center;
     transform-style: preserve-3d;
     // margin: 30px 30px 30px 30px;
@@ -46,6 +30,9 @@
   
   .card h3, .card p {
     display:block;
+  }
+  .title{
+    color:red;
   }
   /* GIRA HORIZONTAL */
   .flip-container:hover .card {
@@ -68,8 +55,8 @@
   }
   
   .back {
-    background-color: $secondaryColor;
-    color: #faebd7;
+    background-color: $light;
+    color: $secondaryColor;
     /*transform: rotateX(180deg);*/
     transform: rotateY(180deg);
     text-align:center;

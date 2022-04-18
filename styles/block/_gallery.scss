@@ -18,16 +18,16 @@
       background-position: center center;
   
       &--item1 {
-        background-image: url(../images/proyectos.jpg);
-      }
-  
-      &--item2 {
         background-image: url(../images/portafolio.jpg);
       }
   
-      &--item3 {
-        background-image: url(../images/voluntariado.jpg);
+      &--item2 {
+        background-image: url(../images/proyectos.jpg);
       }
+  
+      // &--item3 {
+      //   background-image: url(../images/voluntariado.jpg);
+      // }
     }
   
     &__title {
